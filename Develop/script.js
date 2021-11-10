@@ -1,42 +1,77 @@
-// task text was clicked
-$(".list-group").on("click", "p", function() {
-    // get current text of p element
-    var text = $(this)
-      .text()
-      .trim();
-  
-    // replace p element with a new textarea
-    var textInput = $("<textarea>").addClass("form-control").val(text);
-    $(this).replaceWith(textInput);
-  
-    // auto focus new element
-    textInput.trigger("focus");
-  });
+var todayDate = moment().format('dddd, MMM Do YYYY');
+$("#currentDay").html(todayDate);
 
-  // editable field was un-focused
-$(".list-group").on("blur", "textarea", function() {
-    // get current value of textarea
-    var text = $(this).val();
-  
-    // get status type and position in the list
-    var status = $(this)
-      .closest(".list-group")
-      .attr("id")
-      .replace("list-", "");
-    var index = $(this)
-      .closest(".list-group-item")
-      .index();
-  
-    // update task in array and re-save to localstorage
-    tasks[status][index].text = text;
-    saveTasks();
-  
-    // recreate p element
-    var taskP = $("<p>")
-      .addClass("m-1")
-      .text(text);
-  
-    // replace textarea with new content
-    $(this).replaceWith(taskP);
-  });
-  
+$(document).ready(function(){
+    $(".saveBtn").on("click", function() {
+        var textContent = $(this).siblings(".description").val();
+        var time = $(this).parent().attr("id");
+        localStorage.setItem(textContent, time)
+    }
+    
+    )
+function timeTracker() {
+    var currentTime = moment().hour();
+    $(".time-block").each(function(){
+    var TimeBlock = parseInt($(this).attr("id").split("hour")[1]);
+    if (TimeBlock === currentTime){
+        $(this).removeClass("past");
+        $(this).removeClass("future");
+        $(this).addClass("present");
+    }
+    else if (TimeBlock < currentTime) {
+        $(this).removeClass("present");
+        $(this).removeClass("future");
+        $(this).addClass("past");
+    }
+    else {
+        $(this).removeClass("past");
+        $(this).removeClass("present");
+        $(this).addClass("future");
+    }
+    }
+    )
+}
+
+$("#hour8 .description").val(localStorage.getItem("hour8"));
+$("#hour9 .description").val(localStorage.getItem("hour9"));
+$("#hour10 .description").val(localStorage.getItem("hour10"));
+$("#hour11 .description").val(localStorage.getItem("hour11"));
+$("#hour12 .description").val(localStorage.getItem("hour12"));
+$("#hour13 .description").val(localStorage.getItem("hour13"));
+$("#hour14 .description").val(localStorage.getItem("hour14"));
+$("#hour15 .description").val(localStorage.getItem("hour15"));
+$("#hour16 .description").val(localStorage.getItem("hour16"));
+$("#hour17 .description").val(localStorage.getItem("hour17"));
+
+timeTracker();
+})
+
+    // let tasks = []
+
+    // const addTask = (ev)=>{
+    //  ev.preventDefault();
+    //     let task = {
+    //         title: document.getElementById('title').value,
+
+    // }
+    // tasks.push(task);
+    // document.forms[0].reset();
+
+    // console.warn('added' , {tasks} );
+    // let pre = document.querySelector('#msg pre');
+    // pre.textContent = '/n' + JSON.stringify(tasks, '\t', 2);
+
+    // localStorage.setItem('myTasks', JSON.stringify(tasks));
+    
+
+    // document.addEventListener('DOMContentLoaded', ()=>{
+    //     document.getElementById('btn').addEventListener('click', addTask)
+    // })}
+    // function saveDynamicDataToFile() {
+    //     var userInput = document.getElementById('myText').value;
+
+    //     var blob = new Blob([userInput],{ type: "text/plain;charset=utf-8"});
+    //     saveAs(blob, "dynamic.txt");
+    
+
+    // }

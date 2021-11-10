@@ -8,9 +8,6 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css"
-     rel="stylesheet" />
-
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -21,6 +18,8 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css"
+     rel="stylesheet" />
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
     <link rel="stylesheet" href="C:\Users\noahj\OneDrive\desktop\challenge-5\Develop\style.css" />
@@ -31,307 +30,69 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+      <p id="Today" class="lead"></p>
     </header>
     <div class="container">
-      <main class="col-12">
-        <div class="justify-content-around">
-            <!--  -->
-            <div class="col-12">
-              <div class="card">
-                <h4 class="card-header bg-dark text-light d-flex align-items-center">
-                  6:00am
-                  <input type="text" class="things">
-                  
-                  <a href="#" class="card-item"><span class="oi oi-lock-locked"></span></a>
-                  
-                </h4>
-                
-                <ul id="list-toDo" class="list-group list-group-flush">
-                </ul>
-              </div>
-            </div>
-            <!--  -->
-            <div class="col-12">
-              <div class="card">
-                <h4 class="card-header bg-dark text-light d-flex align-items-center">
-                  7:00am
-                  <input type="text" class="things">
-                  
-                  <a href="#" class="card-item"><span class="oi oi-lock-locked"></span></a>
-                  
-                </h4>
-                <ul id="list-inProgress" class="list-group list-group-flush">
-                </ul>
-              </div>
-            </div>
-            <!--  -->
-            <div class="col-12">
-              <div class="card">
-                <h4 class="card-header bg-dark text-light d-flex align-items-center">
-                  8:00am
-                  <input type="text" class="things">
-                  
-                  <a href="#" class="card-item"><span class="oi oi-lock-locked"></span></a>
-                  
-                </h4>
-                <ul id="list-inReview" class="list-group list-group-flush">
-                </ul>
-              </div>
-            </div>
-            <!--  -->
-            <div class="col-12">
-              <div class="card">
-                <h4 class="card-header bg-dark text-light d-flex align-items-center">
-                  9:00am
-                  <input type="text" class="things">
-                  
-                  <a href="#" class="card-item"><span class="oi oi-lock-locked"></span></a>
-                  
-                </h4>
-                <ul id="list-done" class="list-group list-group-flush">
-                </ul>
-              </div>
-            </div>
-            <!--  -->
-            <div class="col-12">
-              <div class="card">
-                <h4 class="card-header bg-dark text-light d-flex align-items-center">
-                  10:00am
-                  <input type="text" class="things">
-                  
-                  <a href="#" class="card-item"><span class="oi oi-lock-locked"></span></a>
-                  
-                </h4>
-                <ul id="list-toDo" class="list-group list-group-flush">
-                </ul>
-              </div>
-            </div>
-            <!--  -->
-            <div class="col-12">
-              <div class="card">
-                <h4 class="card-header bg-dark text-light d-flex align-items-center">
-                  11:00am
-                  <input type="text" class="things">
-                  
-                  <a href="#" class="card-item"><span class="oi oi-lock-locked"></span></a>
-                  
-                </h4>
-                <ul id="list-inProgress" class="list-group list-group-flush">
-                </ul>
-              </div>
-            </div>
-            <!--  -->
-            <div class="col-12">
-              <div class="card">
-                <h4 class="card-header bg-dark text-light d-flex align-items-center">
-                  12:00pm
-                  <input type="text" class="things">
-                  
-                  <a href="#" class="card-item"><span class="oi oi-lock-locked"></span></a>
-                  
-                </h4>
-                <ul id="list-inReview" class="list-group list-group-flush">
-                </ul>
-              </div>
-            </div>
-            <!--  -->
-            <div class="col-12">
-              <div class="card">
-                <h4 class="card-header bg-dark text-light d-flex align-items-center">
-                  1:00pm
-                  <input type="text" class="things">
-                  
-                  <a href="#" class="card-item"><span class="oi oi-lock-locked"></span></a>
-                  
-                </h4>
-                <ul id="list-done" class="list-group list-group-flush">
-                </ul>
-              </div>
-            </div>
-            <!--  -->
-            <div class="col-12">
-              <div class="card">
-                <h4 class="card-header bg-dark text-light d-flex align-items-center">
-                  2:00pm
-                  <input type="text" class="things">
-                  
-                  <a href="#" class="card-item"><span class="oi oi-lock-locked"></span></a>
-                  
-                </h4>
-                <ul id="list-toDo" class="list-group list-group-flush">
-                </ul>
-              </div>
-            </div>
-            <!--  -->
-            <div class="col-12">
-              <div class="card">
-                <h4 class="card-header bg-dark text-light d-flex align-items-center">
-                  3:00pm
-                  <input type="text" class="things">
-                  
-                  <a href="#" class="card-item"><span class="oi oi-lock-locked"></span></a>
-                  
-                </h4>
-                <ul id="list-inProgress" class="list-group list-group-flush">
-                </ul>
-              </div>
-            </div>
-            <!--  -->
-            <div class="col-12">
-              <div class="card">
-                <h4 class="card-header bg-dark text-light d-flex align-items-center">
-                  4:00pm
-                  <input type="text" class="things">
-                  
-                  <a href="#" class="card-item"><span class="oi oi-lock-locked"></span></a>
-                  
-                </h4>
-                <ul id="list-inReview" class="list-group list-group-flush">
-                </ul>
-              </div>
-            </div>
-            <!--  -->
-            <div class="col-12">
-              <div class="card">
-                <h4 class="card-header bg-dark text-light d-flex align-items-center">
-                  5:00pm
-                  <input type="text" class="things">
-                  
-                  <a href="#" class="card-item"><span class="oi oi-lock-locked"></span></a>
-                  
-                </h4>
-                <ul id="list-done" class="list-group list-group-flush">
-                </ul>
-              </div>
-            </div>
-            <!--  -->
-            <div class="col-12">
-              <div class="card">
-                <h4 class="card-header bg-dark text-light d-flex align-items-center">
-                  6:00pm
-                  <input type="text" class="things">
-                  
-                  <a href="#" class="card-item"><span class="oi oi-lock-locked"></span></a>
-                  
-                </h4>
-                <ul id="list-toDo" class="list-group list-group-flush">
-                </ul>
-              </div>
-            </div>
-            <!--  -->
-            <div class="col-12">
-              <div class="card">
-                <h4 class="card-header bg-dark text-light d-flex align-items-center">
-                  7:00pm
-                  <input type="text" class="things">
-                  
-                  <a href="#" class="card-item"><span class="oi oi-lock-locked"></span></a>
-                  
-                </h4>
-                <ul id="list-inProgress" class="list-group list-group-flush">
-                </ul>
-              </div>
-            </div>
-            <!--  -->
-            <div class="col-12">
-              <div class="card">
-                <h4 class="card-header bg-dark text-light d-flex align-items-center">
-                  8:00pm
-                  <input type="text" class="things">
-                  
-                  <a href="#" class="card-item"><span class="oi oi-lock-locked"></span></a>
-                  
-                </h4>
-                <ul id="list-inReview" class="list-group list-group-flush">
-                </ul>
-              </div>
-            </div>
-            <!--  -->
-            <div class="col-12">
-              <div class="card">
-                <h4 class="card-header bg-dark text-light d-flex align-items-center">
-                  9:00pm
-                  <input type="text" class="things">
-                  
-                  <a href="#" class="card-item"><span class="oi oi-lock-locked"></span></a>
-                  
-                </h4>
-                <ul id="list-done" class="list-group list-group-flush">
-                </ul>
-              </div>
-            </div>
-            <!--  -->
-            <div class="col-12">
-              <div class="card">
-                <h4 class="card-header bg-dark text-light d-flex align-items-center">
-                  10:00pm
-                  <input type="text" class="things">
-                  
-                  <a href="#" class="card-item"><span class="oi oi-lock-locked"></span></a>
-                  
-                </h4>
-                <ul id="list-toDo" class="list-group list-group-flush">
-                </ul>
-              </div>
-            </div>
-            <!--  -->
-            <div class="col-12">
-              <div class="card">
-                <h4 class="card-header bg-dark text-light d-flex align-items-center">
-                  11:00pm
-                  <input type="text" class="things">
-                  
-                  <a href="#" class="card-item"><span class="oi oi-lock-locked"></span></a>
-                  
-                </h4>
-                <div>
-                <ul id="list-inProgress" class="list-group list-group-flush">
-                </ul>
-              </div>
-            </div>
-           
-        <div class="mt-auto overflow-hidden" id="trash">
-          <div class="w-100 p-3 text-center bottom-trash">
-            <span class="oi oi-trash"> </span> Drop Here to Remove.
-          </div>
-        </div>
-      </main>
-    </div>
-  
-    <!-- Modal -->
-    <div class="modal fade" id="task-form-modal" tabindex="-1" role="dialog" aria-labelledby="task-form-modal" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="myModalTitle">Add New Task</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label for="modalTaskDescription"></label>
-                <textarea class="form-control" id="modalTaskDescription" rows="3"></textarea>
-              </div>
-              <div class="form-group">
-                <label for="modalDueDate"></label>
-                <input type="text" class="form-control" placeholder="mm/dd/yyyy" id="modalDueDate" autocomplete="off">
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-close" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-save"></button>
-          </div>
-        </div>
+      
+    
+    <!-- Timeblocks go here -->
+
+      <div id="hour8" class="row time-block">
+        <div class="col-md-1 hour">8 AM</div>
+          <textarea class="col-md-10 task description"></textarea>
+          <button class="btn saveBtn col-md-1 oi oi-lock-locked"></button>
       </div>
-    </div><!-- Timeblocks go here -->
-    </div>
+      <div id="hour9" class="row time-block">
+        <div class="col-md-1 hour">9 AM</div>
+        <textarea class="col-md-10 task description"></textarea>
+        <button class="btn saveBtn col-md-1 oi oi-lock-locked"></button>
+      </div>
+      <div id="hour10" class="row time-block">
+          <div class="col-md-1 hour">10 AM</div>
+          <textarea class="col-md-10 task description"></textarea>
+          <button class="btn saveBtn col-md-1 oi oi-lock-locked"></button>
+        </div>
+        <div id="hour11" class="row time-block">
+            <div class="col-md-1 hour">11 AM</div>
+            <textarea class="col-md-10 task description"></textarea>
+            <button class="btn saveBtn col-md-1 oi oi-lock-locked"></button>
+        </div>
+        <div id="hour12" class="row time-block">
+            <div class="col-md-1 hour">12 PM</div>
+            <textarea class="col-md-10 task description"></textarea>
+            <button class="btn saveBtn col-md-1 oi oi-lock-locked"></button>
+        </div>
+        <div id="hour13" class="row time-block">
+              <div class="col-md-1 hour">1 PM</div>
+              <textarea class="col-md-10 task description"></textarea>
+              <button class="btn saveBtn col-md-1 oi oi-lock-locked"></button>
+        </div>
+        <div id="hour14" class="row time-block">
+          <div class="col-md-1 hour">2 PM</div>
+          <textarea class="col-md-10 task description"></textarea>
+          <button class="btn saveBtn col-md-1 oi oi-lock-locked"></button>
+        </div>
+        <div id="hour15" class="row time-block">
+          <div class="col-md-1 hour">3 PM</div>
+          <textarea class="col-md-10 task description"></textarea>
+          <button class="btn saveBtn col-md-1 oi oi-lock-locked"></button>
+        </div>
+        <div id="hour16" class="row time-block">
+          <div class="col-md-1 hour">4 PM</div>
+          <textarea class="col-md-10 task description"></textarea>
+          <button class="btn saveBtn col-md-1 oi oi-lock-locked"></button>
+        </div><div id="hour17" class="row time-block">
+          <div class="col-md-1 hour">5 PM</div>
+          <textarea class="col-md-10 task description"></textarea>
+          <button class="btn saveBtn col-md-1 oi oi-lock-locked"></button>
+        </div>
+
+    
+  </div>
+    
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="C:\Users\noahj\OneDrive\desktop\challenge-5\Develop\script.js"></script>
   </body>
-  <script src="C:\Users\noahj\OneDrive\desktop\challenge-5\Develop\script.js"></script>
 </html>
